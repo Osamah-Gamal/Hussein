@@ -12,12 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- AOS Library for Animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
     
-        <link rel="stylesheet" href="style.css">
-
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="Hussein.jpeg">
-   
+    <link rel="icon" type="image/png" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23b8893a'/%3E%3Ctext x='50' y='67' font-size='50' text-anchor='middle' fill='%23ffffff' font-weight='bold'%3Eح%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
@@ -41,12 +40,12 @@
 <aside class="sidebar-panel" id="sidebarPanel">
     <button class="drawer-close" id="drawerCloseBtn"><i class="fa-solid fa-xmark"></i></button>
     <ul class="sidebar-links">
-        <li><a href="#home" class="active" id="navHome"><i class="fa-solid fa-house"></i> <span>الصفحة الرئيسية</span></a></li>
-        <li><a href="#services" id="navServices"><i class="fa-solid fa-cubes"></i> <span>الخدمات التقنية</span></a></li>
-        <li><a href="#portfolio" id="navPortfolio"><i class="fa-solid fa-folder-open"></i> <span>أعمال منجزة</span></a></li>
-        <li><a href="#credentials" id="navCredentials"><i class="fa-solid fa-award"></i> <span>الشهادات والاعتمادات</span></a></li>
-        <li><a href="#philosophy" id="navPhilosophy"><i class="fa-solid fa-terminal"></i> <span>رؤيتي الفلسفية</span></a></li>
-        <li><a href="#contact" id="navContact"><i class="fa-solid fa-envelope"></i> <span>تواصل معي</span></a></li>
+        <li><a href="#home" class="active" id="navHome"><i class="fa-solid fa-house"></i> <span>الرئيسية</span></a></li>
+        <li><a href="#services" id="navServices"><i class="fa-solid fa-cubes"></i> <span>الخدمات</span></a></li>
+        <li><a href="#portfolio" id="navPortfolio"><i class="fa-solid fa-folder-open"></i> <span>الأعمال</span></a></li>
+        <li><a href="#credentials" id="navCredentials"><i class="fa-solid fa-award"></i> <span>الاعتمادات</span></a></li>
+        <li><a href="#philosophy" id="navPhilosophy"><i class="fa-solid fa-terminal"></i> <span>الفلسفة</span></a></li>
+        <li><a href="#contact" id="navContact"><i class="fa-solid fa-envelope"></i> <span>التواصل</span></a></li>
     </ul>
     <div style="font-size: 0.8rem; text-align: center; opacity: 0.7;" id="sideFooterText">استشارات رقمية متقدمة</div>
 </aside>
@@ -70,7 +69,7 @@
 <div class="container">
     <div class="metrics-row">
         <div class="metric-box"><span class="metric-num">+9</span><span id="stat1Text">سنوات خبرة</span></div>
-        <div class="metric-box"><span class="metric-num">+120</span><span id="stat2Text">مشروع متكامل</span></div>
+        <div class="metric-box"><span class="metric-num">+7</span><span id="stat2Text">مشروع متكامل</span></div>
         <div class="metric-box"><span class="metric-num">100%</span><span id="stat3Text">مرونة بنيوية</span></div>
     </div>
 </div>
@@ -241,78 +240,35 @@
         themeBtn.innerHTML = currentTheme === 'light' ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
     };
 
-    // EMAIL SENDING FUNCTION - Opens email client with formatted message
-    function openEmailClient(name, email, message) {
+    // Simple Email Function
+    function sendEmailClient(name, email, message) {
         const toEmail = "hassenma2100@gmail.com";
-        
-        // Create formatted subject
-        const subject = `طلب استشارة تقنية من ${name}`;
-        
-        // Create beautifully formatted email body
-        const emailBody = `
-┌─────────────────────────────────────────────┐
-│           📧 طلب استشارة تقنية جديد          │
-│         من موقع حسين الحضرمي - الخبير الرقمي  │
-└─────────────────────────────────────────────┘
-
-╔═════════════════════════════════════════════╗
-║              📋 معلومات المرسل               ║
-╠═════════════════════════════════════════════╣
-║ 👤 الـــاســـم: ${name}
-║ 📧 البريد الإلكتروني: ${email}
-║ 📍 الموقع: المملكة العربية السعودية
-╚═════════════════════════════════════════════╝
-
-╔═════════════════════════════════════════════╗
-║           💡 تفاصيل الطلب التقني             ║
-╠═════════════════════════════════════════════╣
-║ 
-║ ${message}
-║ 
-╚═════════════════════════════════════════════╝
-
-┌─────────────────────────────────────────────┐
-│  📅 تاريخ الإرسال: ${new Date().toLocaleString('ar-SA')}
-│  🌐 المصدر: الموقع الرسمي - حسين الحضرمي
-└─────────────────────────────────────────────┘
-
-✨ سيتم الرد على هذا الطلب في أقرب وقت ممكن خلال 24 ساعة.
-📞 للتواصل السريع: +966 0535640133
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  هذا البريد مرسل تلقائياً من نموذج التواصل في الموقع
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-        `;
-        
-        // Encode for URL
-        const encodedSubject = encodeURIComponent(subject);
-        const encodedBody = encodeURIComponent(emailBody);
-        
-        // Create mailto link
-        const mailtoLink = `mailto:${toEmail}?subject=${encodedSubject}&body=${encodedBody}`;
-        
-        // Open default email client
+        let subject, body;
+        if (currentLang === 'ar') {
+            subject = `طلب استشارة تقنية من ${name}`;
+            body = `الاسم: ${name}%0A%0Aالبريد الإلكتروني: ${email}%0A%0Aالرسالة:%0A${message}`;
+        } else {
+            subject = `Technical Consultation Request from ${name}`;
+            body = `Name: ${name}%0A%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
+        }
+        const mailtoLink = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${body}`;
         window.location.href = mailtoLink;
-        
         return true;
     }
 
-    // Form submission handler
+    // Form submission
     document.getElementById('sendBtn').onclick = () => {
         const name = document.getElementById('inputName').value.trim();
         const email = document.getElementById('inputEmail').value.trim();
         const message = document.getElementById('inputMessage').value.trim();
         const fb = document.getElementById('formFeedback');
-        const sendBtn = document.getElementById('sendBtn');
         
-        // Validation
         if (!name || !email || !message) {
-            fb.innerHTML = currentLang === 'ar' ? '⚠️ الرجاء تعبئة جميع الحقول (الاسم، البريد الإلكتروني، والتفاصيل)' : '⚠️ Please fill all fields (name, email, details)';
+            fb.innerHTML = currentLang === 'ar' ? '⚠️ الرجاء تعبئة جميع الحقول' : '⚠️ Please fill all fields';
             fb.style.color = '#eab308';
             setTimeout(() => fb.innerHTML = '', 3000);
             return;
         }
-        
         if (!email.includes('@') || !email.includes('.')) {
             fb.innerHTML = currentLang === 'ar' ? '⚠️ الرجاء إدخال بريد إلكتروني صالح' : '⚠️ Please enter a valid email';
             fb.style.color = '#eab308';
@@ -320,26 +276,16 @@
             return;
         }
         
-        // Open email client with formatted message
-        const success = openEmailClient(name, email, message);
-        
-        if (success) {
-            fb.innerHTML = currentLang === 'ar' ? '✅ تم فتح برنامج البريد الإلكتروني. يرجى مراجعة البيانات والضغط على زر الإرسال لإكمال العملية' : '✅ Email client opened. Please review the data and click send to complete';
-            fb.style.color = '#4ade80';
-            
-            // Clear form fields after successful email client opening
-            document.getElementById('inputName').value = '';
-            document.getElementById('inputEmail').value = '';
-            document.getElementById('inputMessage').value = '';
-        } else {
-            fb.innerHTML = currentLang === 'ar' ? '❌ حدث خطأ. يرجى المحاولة مرة أخرى أو التواصل مباشرة: hassenma2100@gmail.com' : '❌ Error. Please try again or contact directly: hassenma2100@gmail.com';
-            fb.style.color = '#ef4444';
-        }
-        
-        setTimeout(() => fb.innerHTML = '', 6000);
+        sendEmailClient(name, email, message);
+        fb.innerHTML = currentLang === 'ar' ? '✅ تم فتح البريد الإلكتروني. راجع البيانات ثم اضغط إرسال' : '✅ Email opened. Review data then click send';
+        fb.style.color = '#4ade80';
+        document.getElementById('inputName').value = '';
+        document.getElementById('inputEmail').value = '';
+        document.getElementById('inputMessage').value = '';
+        setTimeout(() => fb.innerHTML = '', 5000);
     };
 
-    // Update Content Function
+    // Update Content
     function updateContent() {
         const isAr = currentLang === 'ar';
         document.documentElement.setAttribute('dir', isAr ? 'rtl' : 'ltr');
@@ -347,12 +293,12 @@
         
         const texts = {
             brandLogo: isAr ? "حسين الحضرمي" : "Hussein Al-Hadhrami",
-            navHome: isAr ? "الصفحة الرئيسية" : "Home",
-            navServices: isAr ? "الخدمات التقنية" : "Tech Services",
-            navPortfolio: isAr ? "أعمال منجزة" : "Portfolio",
-            navCredentials: isAr ? "الشهادات والاعتمادات" : "Credentials",
-            navPhilosophy: isAr ? "رؤيتي الفلسفية" : "Philosophy",
-            navContact: isAr ? "تواصل معي" : "Contact",
+            navHome: isAr ? "الرئيسية" : "Home",
+            navServices: isAr ? "الخدمات" : "Services",
+            navPortfolio: isAr ? "الأعمال" : "Portfolio",
+            navCredentials: isAr ? "الاعتمادات" : "Credentials",
+            navPhilosophy: isAr ? "الفلسفة" : "Philosophy",
+            navContact: isAr ? "التواصل" : "Contact",
             sideFooterText: isAr ? "استشارات رقمية متقدمة" : "Advanced Digital Consulting",
             heroBadgeText: isAr ? "استشاري نظم رقمية متقدم" : "Senior Digital Systems Consultant",
             heroMainTitle: isAr ? "هندسة <span>حلول رقمية</span> فائقة الأداء" : "Engineering <span>High-Performance</span> Digital Solutions",
@@ -392,7 +338,6 @@
             }
         }
         
-        // Render dynamic grids
         const servicesData = isAr ? servicesAr : servicesEn;
         document.getElementById('servicesGrid').innerHTML = servicesData.map(s => `
             <div class="matrix-node" data-aos="fade-up">
@@ -421,16 +366,13 @@
         setTimeout(() => AOS.refresh(), 100);
     }
 
-    // Language Toggle
     langBtn.onclick = () => { currentLang = currentLang === 'ar' ? 'en' : 'ar'; updateContent(); };
     
-    // Initialize
     window.addEventListener('DOMContentLoaded', () => {
         AOS.init({ once: false, duration: 800, easing: 'ease-out-cubic' });
         updateContent();
     });
     
-    // Active link on scroll
     window.addEventListener('scroll', () => {
         let active = '';
         document.querySelectorAll('section').forEach(s => {
