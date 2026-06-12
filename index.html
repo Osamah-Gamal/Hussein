@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>حسين الحضرمي | خبير بنى رقمية واستشارات تقنية</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS Library for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+        <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Hussein.jpeg">
+   
+</head>
+<body>
+
+<div class="ambient-glow glow-1"></div>
+<div class="ambient-glow glow-2"></div>
+
+<header>
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="#home" class="brand-logo" id="brandLogo">حسين الحضرمي</a>
+            <div class="header-controls">
+                <button class="control-btn" id="themeBtn"><i class="fa-solid fa-moon"></i></button>
+                <button class="control-btn" id="langBtn"><i class="fa-solid fa-globe"></i></button>
+                <button class="control-btn" id="drawerOpenBtn"><i class="fa-solid fa-bars-staggered"></i></button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="panel-overlay" id="panelOverlay"></div>
+<aside class="sidebar-panel" id="sidebarPanel">
+    <button class="drawer-close" id="drawerCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+    <ul class="sidebar-links">
+        <li><a href="#home" class="active" id="navHome"><i class="fa-solid fa-house"></i> <span>الصفحة الرئيسية</span></a></li>
+        <li><a href="#services" id="navServices"><i class="fa-solid fa-cubes"></i> <span>الخدمات التقنية</span></a></li>
+        <li><a href="#portfolio" id="navPortfolio"><i class="fa-solid fa-folder-open"></i> <span>أعمال منجزة</span></a></li>
+        <li><a href="#credentials" id="navCredentials"><i class="fa-solid fa-award"></i> <span>الشهادات والاعتمادات</span></a></li>
+        <li><a href="#philosophy" id="navPhilosophy"><i class="fa-solid fa-terminal"></i> <span>رؤيتي الفلسفية</span></a></li>
+        <li><a href="#contact" id="navContact"><i class="fa-solid fa-envelope"></i> <span>تواصل معي</span></a></li>
+    </ul>
+    <div style="font-size: 0.8rem; text-align: center; opacity: 0.7;" id="sideFooterText">استشارات رقمية متقدمة</div>
+</aside>
+
+<section class="hero" id="home">
+    <div class="container hero-layout">
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <div class="hero-badge"><i class="fa-solid fa-microchip"></i> <span id="heroBadgeText">استشاري نظم رقمية متقدم</span></div>
+            <h1 class="hero-title" id="heroMainTitle">هندسة <span>حلول رقمية</span> فائقة الأداء</h1>
+            <p class="hero-desc" id="heroDescText">أصمم وأطور منظومات تقنية مبتكرة، تجمع بين السرعة الفائقة والأمان المطلق، لتحويل أفكاركم إلى واقع رقمي متكامل.</p>
+            <a href="#contact" class="btn btn-primary" id="heroBtnText"><span>استشارة فورية</span> <i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+        <div class="hero-visuals" data-aos="zoom-in" data-aos-duration="1200">
+            <div class="sphere-frame">
+                <img class="profile-image" src="Hussein.jpeg" alt="حسين الحضرمي" onerror="this.src='https://placehold.co/400x400/1e293b/b8893a?text=H+H'">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="metrics-row">
+        <div class="metric-box"><span class="metric-num">+9</span><span id="stat1Text">سنوات خبرة</span></div>
+        <div class="metric-box"><span class="metric-num">+120</span><span id="stat2Text">مشروع متكامل</span></div>
+        <div class="metric-box"><span class="metric-num">100%</span><span id="stat3Text">مرونة بنيوية</span></div>
+    </div>
+</div>
+
+<section class="section-block" id="services">
+    <div class="container">
+        <div class="section-meta-header">
+            <span class="section-tag" id="servicesTag">مجالات الخبرة</span>
+            <h2 class="section-title" id="servicesTitle">حلول برمجية شاملة ومتكاملة</h2>
+        </div>
+        <div class="services-matrix" id="servicesGrid"></div>
+    </div>
+</section>
+
+<section class="section-block" id="portfolio">
+    <div class="container">
+        <div class="section-meta-header">
+            <span class="section-tag" id="portfolioTag">أعمال استراتيجية</span>
+            <h2 class="section-title" id="portfolioTitle">مشاريع رائدة منفذة</h2>
+        </div>
+        <div class="portfolio-gallery" id="portfolioGrid"></div>
+    </div>
+</section>
+
+<section class="section-block" id="credentials">
+    <div class="container">
+        <div class="section-meta-header">
+            <span class="section-tag" id="credsTag">الجدارة المهنية</span>
+            <h2 class="section-title" id="credsTitle">الاعتمادات والشهادات التخصصية</h2>
+        </div>
+        <div class="credentials-grid" id="credsGrid"></div>
+    </div>
+</section>
+
+<section class="section-block" id="philosophy">
+    <div class="container">
+        <div class="philosophy-container">
+            <p id="philosophyText">"البرمجة الحقيقية تتجاوز مجرد كتابة الأكواد؛ إنها فن هندسة حلول مرنة تقضي على التعقيد، وتمنح الأنظمة القدرة على النمو المستدام."</p>
+            <div class="philosophy-sign">
+                <strong id="phName">حسين الحضرمي</strong> <span id="phTitle">| مستشار النظم والحلول الرقمية</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-block" id="contact">
+    <div class="container">
+        <div class="connection-wrapper">
+            <div class="connection-details">
+                <h2 id="contactTitle">لنبدأ مشروعك القادم</h2>
+                <p id="contactDesc">تواصل معي الآن لمناقشة متطلباتك التقنية وتحويل رؤيتك إلى واقع رقمي.</p>
+                <div class="channels-stack">
+                    <div class="channel-unit">
+                        <div class="channel-unit-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <span id="phoneLabel">رقم الاتصال المباشر</span><br>
+                            <strong class="contact-value" dir="ltr">+966 0535640133</strong>
+                        </div>
+                    </div>
+                    <div class="channel-unit">
+                        <div class="channel-unit-icon"><i class="fa-regular fa-envelope"></i></div>
+                        <div>
+                            <span id="emailLabel">البريد الإلكتروني</span><br>
+                            <strong class="contact-value">hassenma2100@gmail.com</strong>
+                        </div>
+                    </div>
+                    <div class="channel-unit">
+                        <div class="channel-unit-icon"><i class="fa-solid fa-map-pin"></i></div>
+                        <div>
+                            <span id="locationLabel">الموقع الجغرافي</span><br>
+                            <strong id="locationValue">المملكة العربية السعودية</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="connection-form">
+                <div class="form-group">
+                    <label id="nameLabel">الاسم الكامل أو المؤسسة</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="أدخل اسمك">
+                </div>
+                <div class="form-group">
+                    <label id="emailFormLabel">البريد الإلكتروني</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="example@domain.com">
+                </div>
+                <div class="form-group">
+                    <label id="messageLabel">تفاصيل المشروع التقني</label>
+                    <textarea class="form-control" id="inputMessage" rows="4" placeholder="صف فكرتك أو استفسارك التقني..."></textarea>
+                </div>
+                <button class="btn btn-primary" id="sendBtn" style="justify-content: center;">
+                    <span id="sendBtnText">إرسال الطلب</span> <i class="fa-solid fa-paper-plane"></i>
+                </button>
+                <div id="formFeedback" style="font-size: 0.85rem; text-align: center; margin-top: 0.5rem;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p id="footerText">© 2026 حسين الحضرمي — جميع الحقوق الفنية والهندسية محفوظة</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    // Data Arrays
+    const servicesAr = [
+        {title:"منصات ويب سحابية", icon:"fa-cloud", desc:"تطوير منصات ويب عالية الأداء وبنى serverless مرنة."},
+        {title:"تطبيقات الموبايل", icon:"fa-mobile-alt", desc:"تطبيقات هجينة وأصلية بتجربة مستخدم استثنائية."},
+        {title:"أنظمة المؤسسات ERP", icon:"fa-network-wired", desc:"أتمتة شاملة للعمليات التجارية والإدارية."},
+        {title:"متاجر إلكترونية", icon:"fa-cart-shopping", desc:"حلول تجارة رقمية آمنة وقابلة للتوسع."},
+        {title:"استشارات سحابية", icon:"fa-server", desc:"تصميم معماريات سحابية متقدمة على AWS/Azure."},
+        {title:"الذكاء الاصطناعي", icon:"fa-brain", desc:"دمج نماذج AI وتحليلات البيانات الذكية."},
+        {title:"تجربة المستخدم", icon:"fa-pen-ruler", desc:"تصميم واجهات تفاعلية بديهية وجذابة."},
+        {title:"الأمن السيبراني", icon:"fa-shield-halved", desc:"حماية الأنظمة واختبار الاختراق المتقدم."},
+        {title:"DevOps وأتمتة", icon:"fa-gears", desc:"إعداد خطوط CI/CD وأتمتة البنية التحتية."}
+    ];
+    const servicesEn = [
+        {title:"Cloud Web Platforms", icon:"fa-cloud", desc:"High-performance web platforms & serverless architectures."},
+        {title:"Mobile Applications", icon:"fa-mobile-alt", desc:"Hybrid & native apps with exceptional UX."},
+        {title:"ERP Systems", icon:"fa-network-wired", desc:"Complete business process automation."},
+        {title:"E-commerce Solutions", icon:"fa-cart-shopping", desc:"Secure & scalable digital commerce platforms."},
+        {title:"Cloud Consulting", icon:"fa-server", desc:"Advanced AWS/Azure cloud architectures."},
+        {title:"Artificial Intelligence", icon:"fa-brain", desc:"AI models integration & smart analytics."},
+        {title:"UI/UX Design", icon:"fa-pen-ruler", desc:"Intuitive & engaging interface design."},
+        {title:"Cybersecurity", icon:"fa-shield-halved", desc:"Advanced system protection & penetration testing."},
+        {title:"DevOps & Automation", icon:"fa-gears", desc:"CI/CD pipelines & infrastructure automation."}
+    ];
+    const portfolioAr = [
+        {title:"منصة لوجستية ذكية", desc:"حلول تتبع وتحليل لسلاسل الإمداد", icon:"fa-truck-fast"},
+        {title:"محفظة مالية مشفرة", desc:"حلول مصرفية رقمية آمنة", icon:"fa-wallet"},
+        {title:"محرك مبيعات متكامل", desc:"منصة تجارة إلكترونية لامركزية", icon:"fa-chart-line"}
+    ];
+    const portfolioEn = [
+        {title:"Smart Logistics Hub", desc:"Supply chain tracking & analytics", icon:"fa-truck-fast"},
+        {title:"Encrypted FinTech Wallet", desc:"Secure digital banking solutions", icon:"fa-wallet"},
+        {title:"Omnichannel Sales Engine", desc:"Decentralized e-commerce platform", icon:"fa-chart-line"}
+    ];
+    const credsAr = [
+        {title:"هندسة النظم المعقدة", desc:"معتمد في تصميم الأنماط البرمجية والبنى الموزعة", icon:"fa-diagram-project"},
+        {title:"البنية السحابية المتقدمة", desc:"خبرة معتمدة في Kubernetes و Multi-cloud", icon:"fa-cloud"}
+    ];
+    const credsEn = [
+        {title:"Complex Systems Architecture", desc:"Certified in microservices & distributed patterns", icon:"fa-diagram-project"},
+        {title:"Advanced Cloud Infrastructure", desc:"Certified Kubernetes & Multi-cloud expert", icon:"fa-cloud"}
+    ];
+
+    let currentLang = 'ar';
+    let currentTheme = 'light';
+
+    // DOM Elements
+    const sidebar = document.getElementById('sidebarPanel');
+    const overlay = document.getElementById('panelOverlay');
+    const themeBtn = document.getElementById('themeBtn');
+    const langBtn = document.getElementById('langBtn');
+
+    // Sidebar Controls
+    document.getElementById('drawerOpenBtn').onclick = () => { sidebar.classList.add('open'); overlay.classList.add('show'); };
+    const closePanel = () => { sidebar.classList.remove('open'); overlay.classList.remove('show'); };
+    document.getElementById('drawerCloseBtn').onclick = closePanel;
+    overlay.onclick = closePanel;
+    document.querySelectorAll('.sidebar-links a').forEach(a => a.addEventListener('click', closePanel));
+
+    // Theme Toggle
+    themeBtn.onclick = () => {
+        currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        themeBtn.innerHTML = currentTheme === 'light' ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
+    };
+
+    // EMAIL SENDING FUNCTION - Opens email client with formatted message
+    function openEmailClient(name, email, message) {
+        const toEmail = "hassenma2100@gmail.com";
+        
+        // Create formatted subject
+        const subject = `طلب استشارة تقنية من ${name}`;
+        
+        // Create beautifully formatted email body
+        const emailBody = `
+┌─────────────────────────────────────────────┐
+│           📧 طلب استشارة تقنية جديد          │
+│         من موقع حسين الحضرمي - الخبير الرقمي  │
+└─────────────────────────────────────────────┘
+
+╔═════════════════════════════════════════════╗
+║              📋 معلومات المرسل               ║
+╠═════════════════════════════════════════════╣
+║ 👤 الـــاســـم: ${name}
+║ 📧 البريد الإلكتروني: ${email}
+║ 📍 الموقع: المملكة العربية السعودية
+╚═════════════════════════════════════════════╝
+
+╔═════════════════════════════════════════════╗
+║           💡 تفاصيل الطلب التقني             ║
+╠═════════════════════════════════════════════╣
+║ 
+║ ${message}
+║ 
+╚═════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────┐
+│  📅 تاريخ الإرسال: ${new Date().toLocaleString('ar-SA')}
+│  🌐 المصدر: الموقع الرسمي - حسين الحضرمي
+└─────────────────────────────────────────────┘
+
+✨ سيتم الرد على هذا الطلب في أقرب وقت ممكن خلال 24 ساعة.
+📞 للتواصل السريع: +966 0535640133
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  هذا البريد مرسل تلقائياً من نموذج التواصل في الموقع
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        `;
+        
+        // Encode for URL
+        const encodedSubject = encodeURIComponent(subject);
+        const encodedBody = encodeURIComponent(emailBody);
+        
+        // Create mailto link
+        const mailtoLink = `mailto:${toEmail}?subject=${encodedSubject}&body=${encodedBody}`;
+        
+        // Open default email client
+        window.location.href = mailtoLink;
+        
+        return true;
+    }
+
+    // Form submission handler
+    document.getElementById('sendBtn').onclick = () => {
+        const name = document.getElementById('inputName').value.trim();
+        const email = document.getElementById('inputEmail').value.trim();
+        const message = document.getElementById('inputMessage').value.trim();
+        const fb = document.getElementById('formFeedback');
+        const sendBtn = document.getElementById('sendBtn');
+        
+        // Validation
+        if (!name || !email || !message) {
+            fb.innerHTML = currentLang === 'ar' ? '⚠️ الرجاء تعبئة جميع الحقول (الاسم، البريد الإلكتروني، والتفاصيل)' : '⚠️ Please fill all fields (name, email, details)';
+            fb.style.color = '#eab308';
+            setTimeout(() => fb.innerHTML = '', 3000);
+            return;
+        }
+        
+        if (!email.includes('@') || !email.includes('.')) {
+            fb.innerHTML = currentLang === 'ar' ? '⚠️ الرجاء إدخال بريد إلكتروني صالح' : '⚠️ Please enter a valid email';
+            fb.style.color = '#eab308';
+            setTimeout(() => fb.innerHTML = '', 3000);
+            return;
+        }
+        
+        // Open email client with formatted message
+        const success = openEmailClient(name, email, message);
+        
+        if (success) {
+            fb.innerHTML = currentLang === 'ar' ? '✅ تم فتح برنامج البريد الإلكتروني. يرجى مراجعة البيانات والضغط على زر الإرسال لإكمال العملية' : '✅ Email client opened. Please review the data and click send to complete';
+            fb.style.color = '#4ade80';
+            
+            // Clear form fields after successful email client opening
+            document.getElementById('inputName').value = '';
+            document.getElementById('inputEmail').value = '';
+            document.getElementById('inputMessage').value = '';
+        } else {
+            fb.innerHTML = currentLang === 'ar' ? '❌ حدث خطأ. يرجى المحاولة مرة أخرى أو التواصل مباشرة: hassenma2100@gmail.com' : '❌ Error. Please try again or contact directly: hassenma2100@gmail.com';
+            fb.style.color = '#ef4444';
+        }
+        
+        setTimeout(() => fb.innerHTML = '', 6000);
+    };
+
+    // Update Content Function
+    function updateContent() {
+        const isAr = currentLang === 'ar';
+        document.documentElement.setAttribute('dir', isAr ? 'rtl' : 'ltr');
+        document.documentElement.setAttribute('lang', isAr ? 'ar' : 'en');
+        
+        const texts = {
+            brandLogo: isAr ? "حسين الحضرمي" : "Hussein Al-Hadhrami",
+            navHome: isAr ? "الصفحة الرئيسية" : "Home",
+            navServices: isAr ? "الخدمات التقنية" : "Tech Services",
+            navPortfolio: isAr ? "أعمال منجزة" : "Portfolio",
+            navCredentials: isAr ? "الشهادات والاعتمادات" : "Credentials",
+            navPhilosophy: isAr ? "رؤيتي الفلسفية" : "Philosophy",
+            navContact: isAr ? "تواصل معي" : "Contact",
+            sideFooterText: isAr ? "استشارات رقمية متقدمة" : "Advanced Digital Consulting",
+            heroBadgeText: isAr ? "استشاري نظم رقمية متقدم" : "Senior Digital Systems Consultant",
+            heroMainTitle: isAr ? "هندسة <span>حلول رقمية</span> فائقة الأداء" : "Engineering <span>High-Performance</span> Digital Solutions",
+            heroDescText: isAr ? "أصمم وأطور منظومات تقنية مبتكرة، تجمع بين السرعة الفائقة والأمان المطلق، لتحويل أفكاركم إلى واقع رقمي متكامل." : "I design innovative tech ecosystems combining speed, security, and scalability to transform your ideas into reality.",
+            heroBtnText: isAr ? "استشارة فورية" : "Free Consultation",
+            stat1Text: isAr ? "سنوات خبرة" : "Years Exp",
+            stat2Text: isAr ? "مشروع متكامل" : "Projects Done",
+            stat3Text: isAr ? "مرونة بنيوية" : "Scalability",
+            servicesTag: isAr ? "مجالات الخبرة" : "Expertise Areas",
+            servicesTitle: isAr ? "حلول برمجية شاملة ومتكاملة" : "Comprehensive Software Solutions",
+            portfolioTag: isAr ? "أعمال استراتيجية" : "Strategic Projects",
+            portfolioTitle: isAr ? "مشاريع رائدة منفذة" : "Flagship Deliverables",
+            credsTag: isAr ? "الجدارة المهنية" : "Professional Merits",
+            credsTitle: isAr ? "الاعتمادات والشهادات التخصصية" : "Certifications & Credentials",
+            philosophyText: isAr ? '"البرمجة الحقيقية تتجاوز مجرد كتابة الأكواد؛ إنها فن هندسة حلول مرنة تقضي على التعقيد، وتمنح الأنظمة القدرة على النمو المستدام."' : '"True programming goes beyond code; it\'s the art of building adaptive solutions that eliminate complexity and enable sustainable growth."',
+            phName: isAr ? "حسين الحضرمي" : "Hussein Al-Hadhrami",
+            phTitle: isAr ? "| مستشار النظم والحلول الرقمية" : "| Digital Systems Consultant",
+            contactTitle: isAr ? "لنبدأ مشروعك القادم" : "Start Your Next Project",
+            contactDesc: isAr ? "تواصل معي الآن لمناقشة متطلباتك التقنية وتحويل رؤيتك إلى واقع رقمي." : "Contact me now to discuss your technical requirements.",
+            phoneLabel: isAr ? "رقم الاتصال المباشر" : "Direct Phone",
+            emailLabel: isAr ? "البريد الإلكتروني" : "Email Address",
+            locationLabel: isAr ? "الموقع الجغرافي" : "Location",
+            locationValue: "المملكة العربية السعودية",
+            nameLabel: isAr ? "الاسم الكامل أو المؤسسة" : "Full Name / Organization",
+            emailFormLabel: isAr ? "البريد الإلكتروني" : "Email Address",
+            messageLabel: isAr ? "تفاصيل المشروع التقني" : "Project Technical Details",
+            sendBtnText: isAr ? "إرسال الطلب" : "Send Request",
+            footerText: isAr ? "© 2026 حسين الحضرمي — جميع الحقوق الفنية والهندسية محفوظة" : "© 2026 Hussein Al-Hadhrami — All Technical Rights Reserved"
+        };
+        
+        for (let [id, val] of Object.entries(texts)) {
+            const el = document.getElementById(id);
+            if (el) {
+                if (id === 'heroMainTitle') el.innerHTML = val;
+                else if (id === 'locationValue') el.innerText = val;
+                else el.innerText = val;
+            }
+        }
+        
+        // Render dynamic grids
+        const servicesData = isAr ? servicesAr : servicesEn;
+        document.getElementById('servicesGrid').innerHTML = servicesData.map(s => `
+            <div class="matrix-node" data-aos="fade-up">
+                <div class="node-icon"><i class="fa-solid ${s.icon}"></i></div>
+                <h3>${s.title}</h3>
+                <p>${s.desc}</p>
+            </div>
+        `).join('');
+        
+        const portfolioData = isAr ? portfolioAr : portfolioEn;
+        document.getElementById('portfolioGrid').innerHTML = portfolioData.map(p => `
+            <div class="showcase-card" data-aos="fade-up">
+                <div class="showcase-media"><i class="fa-solid ${p.icon}"></i></div>
+                <div class="showcase-body"><h3>${p.title}</h3><p>${p.desc}</p></div>
+            </div>
+        `).join('');
+        
+        const credsData = isAr ? credsAr : credsEn;
+        document.getElementById('credsGrid').innerHTML = credsData.map(c => `
+            <div class="credential-card">
+                <div class="cred-icon"><i class="fa-solid ${c.icon}"></i></div>
+                <div><h3 style="color:var(--text-title);">${c.title}</h3><p>${c.desc}</p></div>
+            </div>
+        `).join('');
+        
+        setTimeout(() => AOS.refresh(), 100);
+    }
+
+    // Language Toggle
+    langBtn.onclick = () => { currentLang = currentLang === 'ar' ? 'en' : 'ar'; updateContent(); };
+    
+    // Initialize
+    window.addEventListener('DOMContentLoaded', () => {
+        AOS.init({ once: false, duration: 800, easing: 'ease-out-cubic' });
+        updateContent();
+    });
+    
+    // Active link on scroll
+    window.addEventListener('scroll', () => {
+        let active = '';
+        document.querySelectorAll('section').forEach(s => {
+            if (pageYOffset >= (s.offsetTop - 250)) active = s.getAttribute('id');
+        });
+        document.querySelectorAll('.sidebar-links a').forEach(l => {
+            l.classList.remove('active');
+            if (l.getAttribute('href') === `#${active}`) l.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>
