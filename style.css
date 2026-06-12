@@ -351,6 +351,7 @@ html[dir="ltr"] .drawer-close { right: 20px; }
     transition: all 0.3s ease;
     cursor: pointer;
 }
+/* Hover effect for desktop & mobile */
 .metric-box:hover, .metric-box:active {
     transform: translateY(-6px);
     border-color: var(--border-hover);
@@ -387,7 +388,7 @@ html[dir="ltr"] .drawer-close { right: 20px; }
     color: var(--text-title);
 }
 
-/* Services Cards */
+/* Services Cards - Full Hover Effect for Desktop & Mobile */
 .services-matrix {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -402,6 +403,7 @@ html[dir="ltr"] .drawer-close { right: 20px; }
     cursor: pointer;
     backdrop-filter: blur(4px);
 }
+/* Desktop hover effect */
 @media (hover: hover) {
     .matrix-node:hover {
         border-color: var(--border-hover);
@@ -414,10 +416,23 @@ html[dir="ltr"] .drawer-close { right: 20px; }
         transform: scale(1.05);
     }
 }
+/* Mobile touch/scroll hover effect - activates on tap/scroll interaction */
 .matrix-node:active {
     transform: scale(0.98);
     border-color: var(--border-hover);
     transition: all 0.05s ease;
+}
+/* For mobile browsers - ensures hover style appears on scroll interaction */
+@media (max-width: 768px) {
+    .matrix-node:active {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lux);
+    }
+    .matrix-node:active .node-icon {
+        background: var(--accent-gold);
+        color: #050914;
+        transform: scale(1.05);
+    }
 }
 .node-icon {
     width: 55px;
@@ -443,7 +458,7 @@ html[dir="ltr"] .drawer-close { right: 20px; }
     line-height: 1.6;
 }
 
-/* Portfolio Cards */
+/* Portfolio Cards - Full Hover Effect */
 .portfolio-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -457,15 +472,23 @@ html[dir="ltr"] .drawer-close { right: 20px; }
     transition: all 0.3s ease;
     cursor: pointer;
 }
+/* Desktop hover */
 @media (hover: hover) {
     .showcase-card:hover {
         transform: translateY(-10px);
         border-color: var(--border-hover);
     }
 }
+/* Mobile active/touch effect */
 .showcase-card:active {
     transform: scale(0.98);
     transition: all 0.05s ease;
+}
+@media (max-width: 768px) {
+    .showcase-card:active {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lux);
+    }
 }
 .showcase-media {
     height: 200px;
@@ -486,7 +509,7 @@ html[dir="ltr"] .drawer-close { right: 20px; }
     color: var(--text-title);
 }
 
-/* Credentials */
+/* Credentials - Full Hover Effect */
 .credentials-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -502,17 +525,25 @@ html[dir="ltr"] .drawer-close { right: 20px; }
     transition: all 0.3s;
     cursor: pointer;
 }
+/* Desktop & Mobile hover/active */
 .credential-card:hover, .credential-card:active {
     transform: translateY(-5px);
     border-color: var(--border-hover);
+}
+@media (max-width: 768px) {
+    .credential-card:active {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lux);
+    }
 }
 .cred-icon { font-size: 2rem; color: var(--accent-gold); }
 .credential-card h3 {
     font-size: 1.1rem;
     margin-bottom: 0.3rem;
+    color: var(--text-title);
 }
 
-/* Philosophy */
+/* Philosophy - Full Hover Effect */
 .philosophy-container {
     background: var(--bg-card);
     border: 1px solid var(--border-glass);
@@ -522,9 +553,16 @@ html[dir="ltr"] .drawer-close { right: 20px; }
     transition: all 0.3s;
     cursor: pointer;
 }
+/* Desktop & Mobile hover/active */
 .philosophy-container:hover, .philosophy-container:active {
     transform: translateY(-5px);
     border-color: var(--border-hover);
+}
+@media (max-width: 768px) {
+    .philosophy-container:active {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lux);
+    }
 }
 .philosophy-container p {
     font-size: 1.5rem;
@@ -533,7 +571,7 @@ html[dir="ltr"] .drawer-close { right: 20px; }
     line-height: 1.7;
 }
 
-/* Contact */
+/* Contact Section - Hover Effects */
 .connection-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -544,7 +582,7 @@ html[dir="ltr"] .drawer-close { right: 20px; }
     padding: 3rem;
     transition: all 0.3s;
 }
-.connection-wrapper:hover {
+.connection-wrapper:hover, .connection-wrapper:active {
     border-color: var(--border-hover);
 }
 .channel-unit {
@@ -557,8 +595,14 @@ html[dir="ltr"] .drawer-close { right: 20px; }
     cursor: pointer;
     transition: all 0.3s;
 }
-.channel-unit:active {
-    transform: scale(0.98);
+/* Desktop & Mobile hover effect */
+.channel-unit:hover, .channel-unit:active {
+    transform: scale(1.02);
+}
+@media (max-width: 768px) {
+    .channel-unit:active {
+        transform: scale(1.02);
+    }
 }
 .channel-unit-icon {
     width: 52px;
@@ -572,7 +616,7 @@ html[dir="ltr"] .drawer-close { right: 20px; }
     color: var(--accent-gold);
     transition: all 0.3s;
 }
-.channel-unit:hover .channel-unit-icon {
+.channel-unit:hover .channel-unit-icon, .channel-unit:active .channel-unit-icon {
     border-color: var(--accent-gold);
     transform: scale(1.05);
 }
@@ -619,6 +663,16 @@ footer {
     text-align: center;
 }
 
+/* Send Button Hover Effect */
+#sendBtn {
+    transition: all 0.3s ease;
+}
+#sendBtn:hover, #sendBtn:active {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(212, 163, 89, 0.35);
+}
+
+/* Responsive Design */
 @media (max-width: 1000px) {
     .hero-layout { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
     .hero-visuals { order: -1; }
