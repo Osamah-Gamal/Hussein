@@ -28,20 +28,20 @@ const servicesData = {
 
 const portfolioData = {
     ar: [
+        {name:"متجر الحمد للحقائب", url:"https://alhamadbags.com", icon:"fa-bag-shopping", desc:"متجر متخصص في الحقائب والسفر"},
+        {name:"متجر متاح السفر", url:"https://mta3sfr.com", icon:"fa-plane", desc:"متجر لحقائب السفر والإكسسوارات"},
         {name:"متجر جزيرة الطيب", url:"https://jazeert.sa", icon:"fa-crown", desc:"متجر متخصص في المنتجات الغذائية والتمور"},
         {name:"متجر أفكار مودرن", url:"https://afkar-modern.com", icon:"fa-lightbulb", desc:"متجر للأثاث والديكورات العصرية"},
         {name:"متجر العوبتاني للبلاستيك", url:"https://asalobathani.com", icon:"fa-recycle", desc:"متجر متخصص في المنتجات البلاستيكية"},
-        {name:"متجر سليب ستار", url:"https://sleepstar.sa", icon:"fa-bed", desc:"متجر للمفروشات ومستلزمات النوم"},
-        {name:"متجر الحمد للحقائب", url:"https://alhamadbags.com", icon:"fa-bag-shopping", desc:"متجر متخصص في الحقائب والسفر"},
-        {name:"متجر متاح السفر", url:"https://mta3sfr.com", icon:"fa-plane", desc:"متجر لحقائب السفر والإكسسوارات"}
+        {name:"متجر سليب ستار", url:"https://sleepstar.sa", icon:"fa-bed", desc:"متجر للمفروشات ومستلزمات النوم"}
     ],
     en: [
+        {name:"Alhamad Bags", url:"https://alhamadbags.com", icon:"fa-bag-shopping", desc:"Specialized in bags and travel"},
+        {name:"Mta3sfr", url:"https://mta3sfr.com", icon:"fa-plane", desc:"Travel bags and accessories store"},
         {name:"Jazeert Store", url:"https://jazeert.sa", icon:"fa-crown", desc:"Specialized in food products and dates"},
         {name:"Afkar Modern", url:"https://afkar-modern.com", icon:"fa-lightbulb", desc:"Modern furniture and decor store"},
         {name:"Asalobathani Plastic", url:"https://asalobathani.com", icon:"fa-recycle", desc:"Specialized in plastic products"},
-        {name:"Sleepstar", url:"https://sleepstar.sa", icon:"fa-bed", desc:"Furniture and bedding store"},
-        {name:"Alhamad Bags", url:"https://alhamadbags.com", icon:"fa-bag-shopping", desc:"Specialized in bags and travel"},
-        {name:"Mta3sfr", url:"https://mta3sfr.com", icon:"fa-plane", desc:"Travel bags and accessories store"}
+        {name:"Sleepstar", url:"https://sleepstar.sa", icon:"fa-bed", desc:"Furniture and bedding store"}
     ]
 };
 
@@ -121,6 +121,75 @@ document.getElementById('sendBtn').onclick = () => {
     setTimeout(() => fb.innerHTML = '', 5000);
 };
 
+// Preview Modal
+let previewModal = null;
+
+function createPreviewModal() {
+    if (previewModal) return;
+    
+    previewModal = document.createElement('div');
+    previewModal.className = 'preview-modal';
+    previewModal.innerHTML = `
+        <div class="preview-modal-content">
+            <div class="preview-modal-header">
+                <h3 id="previewTitle">معاينة المتجر</h3>
+                <button class="preview-modal-close"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <div style="position: relative; height: 100%;">
+                <div class="preview-loading" id="previewLoading">
+                    <i class="fa-solid fa-spinner"></i>
+                    <p>جاري تحميل المتجر...</p>
+                </div>
+                <iframe id="previewIframe" class="preview-iframe" style="display: none;"></iframe>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(previewModal);
+    
+    const closeBtn = previewModal.querySelector('.preview-modal-close');
+    closeBtn.onclick = () => {
+        previewModal.classList.remove('active');
+        const iframe = document.getElementById('previewIframe');
+        iframe.src = 'about:blank';
+        iframe.style.display = 'none';
+        document.getElementById('previewLoading').style.display = 'flex';
+    };
+    
+    previewModal.onclick = (e) => {
+        if (e.target === previewModal) {
+            closeBtn.click();
+        }
+    };
+}
+
+window.openPreview = function(url, name) {
+    createPreviewModal();
+    
+    const titleEl = document.getElementById('previewTitle');
+    const iframe = document.getElementById('previewIframe');
+    const loading = document.getElementById('previewLoading');
+    
+    titleEl.innerText = currentLang === 'ar' ? `معاينة: ${name}` : `Preview: ${name}`;
+    
+    loading.style.display = 'flex';
+    iframe.style.display = 'none';
+    iframe.src = url;
+    
+    iframe.onload = () => {
+        loading.style.display = 'none';
+        iframe.style.display = 'block';
+    };
+    
+    setTimeout(() => {
+        if (iframe.src && iframe.src !== 'about:blank') {
+            loading.style.display = 'none';
+            iframe.style.display = 'block';
+        }
+    }, 3000);
+    
+    previewModal.classList.add('active');
+};
+
 // Mobile Hover Effect
 function initMobileHover() {
     if (window.innerWidth > 768) return;
@@ -143,6 +212,17 @@ function initMobileHover() {
         el.addEventListener('touchstart', () => el.classList.add('hover-effect'), { passive: true });
         el.addEventListener('touchend', () => setTimeout(() => el.classList.remove('hover-effect'), 200));
     });
+}
+
+function updatePlaceholders() {
+    const isAr = currentLang === 'ar';
+    const nameInput = document.getElementById('inputName');
+    const emailInput = document.getElementById('inputEmail');
+    const messageInput = document.getElementById('inputMessage');
+    
+    if (nameInput) nameInput.placeholder = isAr ? 'أدخل اسمك' : 'Enter your name';
+    if (emailInput) emailInput.placeholder = isAr ? 'example@domain.com' : 'example@domain.com';
+    if (messageInput) messageInput.placeholder = isAr ? 'صف فكرتك أو استفسارك عن إدارة المتجر...' : 'Describe your idea or inquiry about store management...';
 }
 
 // Update Content
@@ -217,12 +297,18 @@ function updateContent() {
         </div>
     `).join('');
     
-    // Update portfolio grid
+    // Update portfolio grid with icons only
     const portfolio = isAr ? portfolioData.ar : portfolioData.en;
     document.getElementById('portfolioGrid').innerHTML = portfolio.map(p => `
         <div class="showcase-card" data-aos="fade-up">
             <div class="showcase-media">
-                <i class="fa-solid ${p.icon}"></i>
+                <i class="fa-solid ${p.icon}" style="font-size: 4rem; color: white; opacity: 0.8;"></i>
+                <div class="preview-overlay">
+                    <button class="preview-btn" onclick="event.stopPropagation(); openPreview('${p.url}', '${p.name.replace(/'/g, "\\'")}')">
+                        <i class="fa-solid fa-eye"></i>
+                        ${isAr ? 'معاينة المتجر' : 'Preview Store'}
+                    </button>
+                </div>
             </div>
             <div class="showcase-body">
                 <h3>${p.name}</h3>
@@ -240,6 +326,9 @@ function updateContent() {
             <div><h3 style="color:var(--text-title);">${p.name}</h3><p>${p.desc}</p></div>
         </div>
     `).join('');
+    
+    // Update form placeholders
+    updatePlaceholders();
     
     setTimeout(() => {
         AOS.refresh();
