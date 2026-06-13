@@ -1,315 +1,280 @@
- // Data Arrays
-    const servicesAr = [
-        {title:"منصات ويب سحابية", icon:"fa-cloud", desc:"تطوير منصات ويب عالية الأداء وبنى serverless مرنة."},
-        {title:"تطبيقات الموبايل", icon:"fa-mobile-alt", desc:"تطبيقات هجينة وأصلية بتجربة مستخدم استثنائية."},
-        {title:"أنظمة المؤسسات ERP", icon:"fa-network-wired", desc:"أتمتة شاملة للعمليات التجارية والإدارية."},
-        {title:"متاجر إلكترونية", icon:"fa-cart-shopping", desc:"حلول تجارة رقمية آمنة وقابلة للتوسع."},
-        {title:"استشارات سحابية", icon:"fa-server", desc:"تصميم معماريات سحابية متقدمة على AWS/Azure."},
-        {title:"الذكاء الاصطناعي", icon:"fa-brain", desc:"دمج نماذج AI وتحليلات البيانات الذكية."},
-        {title:"تجربة المستخدم", icon:"fa-pen-ruler", desc:"تصميم واجهات تفاعلية بديهية وجذابة."},
-        {title:"الأمن السيبراني", icon:"fa-shield-halved", desc:"حماية الأنظمة واختبار الاختراق المتقدم."},
-        {title:"DevOps وأتمتة", icon:"fa-gears", desc:"إعداد خطوط CI/CD وأتمتة البنية التحتية."}
-    ];
-    const servicesEn = [
-        {title:"Cloud Web Platforms", icon:"fa-cloud", desc:"High-performance web platforms & serverless architectures."},
-        {title:"Mobile Applications", icon:"fa-mobile-alt", desc:"Hybrid & native apps with exceptional UX."},
-        {title:"ERP Systems", icon:"fa-network-wired", desc:"Complete business process automation."},
-        {title:"E-commerce Solutions", icon:"fa-cart-shopping", desc:"Secure & scalable digital commerce platforms."},
-        {title:"Cloud Consulting", icon:"fa-server", desc:"Advanced AWS/Azure cloud architectures."},
-        {title:"Artificial Intelligence", icon:"fa-brain", desc:"AI models integration & smart analytics."},
-        {title:"UI/UX Design", icon:"fa-pen-ruler", desc:"Intuitive & engaging interface design."},
-        {title:"Cybersecurity", icon:"fa-shield-halved", desc:"Advanced system protection & penetration testing."},
-        {title:"DevOps & Automation", icon:"fa-gears", desc:"CI/CD pipelines & infrastructure automation."}
-    ];
-    const portfolioAr = [
-        {title:"منصة لوجستية ذكية", desc:"حلول تتبع وتحليل لسلاسل الإمداد", icon:"fa-truck-fast"},
-        {title:"محفظة مالية مشفرة", desc:"حلول مصرفية رقمية آمنة", icon:"fa-wallet"},
-        {title:"محرك مبيعات متكامل", desc:"منصة تجارة إلكترونية لامركزية", icon:"fa-chart-line"}
-    ];
-    const portfolioEn = [
-        {title:"Smart Logistics Hub", desc:"Supply chain tracking & analytics", icon:"fa-truck-fast"},
-        {title:"Encrypted FinTech Wallet", desc:"Secure digital banking solutions", icon:"fa-wallet"},
-        {title:"Omnichannel Sales Engine", desc:"Decentralized e-commerce platform", icon:"fa-chart-line"}
-    ];
-    const credsAr = [
-        {title:"هندسة النظم المعقدة", desc:"معتمد في تصميم الأنماط البرمجية والبنى الموزعة", icon:"fa-diagram-project"},
-        {title:"البنية السحابية المتقدمة", desc:"خبرة معتمدة في Kubernetes و Multi-cloud", icon:"fa-cloud"}
-    ];
-    const credsEn = [
-        {title:"Complex Systems Architecture", desc:"Certified in microservices & distributed patterns", icon:"fa-diagram-project"},
-        {title:"Advanced Cloud Infrastructure", desc:"Certified Kubernetes & Multi-cloud expert", icon:"fa-cloud"}
-    ];
+// Data - English and Arabic
+const servicesData = {
+    ar: [
+        {title:"الإشراف الكامل على المتجر", icon:"fa-store", desc:"مسؤول عن المتجر الإلكتروني والإشراف الكامل على سير العمل اليومي."},
+        {title:"قيادة فريق خدمة العملاء", icon:"fa-users", desc:"قيادة ومتابعة فريق خدمة العملاء لضمان رضا العملاء وحل مشاكلهم بسرعة."},
+        {title:"التنسيق مع التسويق", icon:"fa-chart-line", desc:"التنسيق مع فريق التسويق لتنفيذ الحملات ومتابعة نتائجها وتحسينها."},
+        {title:"التنسيق مع التصميم", icon:"fa-palette", desc:"التنسيق مع فريق التصميم لتجهيز البنرات وصور المنتجات والعروض."},
+        {title:"إدارة المنتجات", icon:"fa-boxes", desc:"إدارة المنتجات: إضافة جديدة، حذف المنتهية، وتحديث البيانات باستمرار."},
+        {title:"مراجعة الأسعار", icon:"fa-tags", desc:"مراجعة وتعديل الأسعار والكميات حسب العروض وتغيرات السوق."},
+        {title:"دمج المنتجات", icon:"fa-object-group", desc:"دمج المنتجات المتشابهة وتنسيق الأوصاف لسهولة التصفح."},
+        {title:"متابعة الشحن", icon:"fa-truck", desc:"متابعة تنفيذ الطلبات والتنسيق مع شركات الشحن لضمان التسليم في الوقت."},
+        {title:"تحليل المبيعات", icon:"fa-chart-bar", desc:"تحليل تقارير المبيعات وسلوك العملاء واقتراح حلول لرفع الأداء."},
+        {title:"تقارير دورية", icon:"fa-file-alt", desc:"تقديم تقارير دورية لإدارة المتجر تتضمن الإنجازات والتوصيات التطويرية."}
+    ],
+    en: [
+        {title:"Full Store Supervision", icon:"fa-store", desc:"Responsible for the e-commerce store and full supervision of daily workflow."},
+        {title:"Customer Service Leadership", icon:"fa-users", desc:"Leading and following up the customer service team to ensure satisfaction and quick problem resolution."},
+        {title:"Marketing Coordination", icon:"fa-chart-line", desc:"Coordinating with marketing team to execute campaigns and improve results."},
+        {title:"Design Coordination", icon:"fa-palette", desc:"Coordinating with design team for banners, product images, and offers."},
+        {title:"Product Management", icon:"fa-boxes", desc:"Adding new products, removing discontinued ones, and updating data continuously."},
+        {title:"Price & Stock Review", icon:"fa-tags", desc:"Reviewing and adjusting prices and quantities based on offers and market changes."},
+        {title:"Product Merging", icon:"fa-object-group", desc:"Merging similar products and formatting descriptions for easy browsing."},
+        {title:"Order & Shipping", icon:"fa-truck", desc:"Following up order fulfillment and coordinating with shipping companies."},
+        {title:"Sales Analytics", icon:"fa-chart-bar", desc:"Analyzing sales reports and customer behavior to suggest performance improvements."},
+        {title:"Periodic Reports", icon:"fa-file-alt", desc:"Providing periodic reports to management including achievements and recommendations."}
+    ]
+};
 
-    let currentLang = 'ar';
-    let currentTheme = 'light';
+const portfolioData = {
+    ar: [
+        {name:"متجر جزيرة الطيب", url:"https://jazeert.sa", icon:"fa-crown", desc:"متجر متخصص في المنتجات الغذائية والتمور"},
+        {name:"متجر أفكار مودرن", url:"https://afkar-modern.com", icon:"fa-lightbulb", desc:"متجر للأثاث والديكورات العصرية"},
+        {name:"متجر العوبتاني للبلاستيك", url:"https://asalobathani.com", icon:"fa-recycle", desc:"متجر متخصص في المنتجات البلاستيكية"},
+        {name:"متجر سليب ستار", url:"https://sleepstar.sa", icon:"fa-bed", desc:"متجر للمفروشات ومستلزمات النوم"},
+        {name:"متجر الحمد للحقائب", url:"https://alhamadbags.com", icon:"fa-bag-shopping", desc:"متجر متخصص في الحقائب والسفر"},
+        {name:"متجر متاح السفر", url:"https://mta3sfr.com", icon:"fa-plane", desc:"متجر لحقائب السفر والإكسسوارات"}
+    ],
+    en: [
+        {name:"Jazeert Store", url:"https://jazeert.sa", icon:"fa-crown", desc:"Specialized in food products and dates"},
+        {name:"Afkar Modern", url:"https://afkar-modern.com", icon:"fa-lightbulb", desc:"Modern furniture and decor store"},
+        {name:"Asalobathani Plastic", url:"https://asalobathani.com", icon:"fa-recycle", desc:"Specialized in plastic products"},
+        {name:"Sleepstar", url:"https://sleepstar.sa", icon:"fa-bed", desc:"Furniture and bedding store"},
+        {name:"Alhamad Bags", url:"https://alhamadbags.com", icon:"fa-bag-shopping", desc:"Specialized in bags and travel"},
+        {name:"Mta3sfr", url:"https://mta3sfr.com", icon:"fa-plane", desc:"Travel bags and accessories store"}
+    ]
+};
 
-    // DOM Elements
-    const sidebar = document.getElementById('sidebarPanel');
-    const overlay = document.getElementById('panelOverlay');
-    const themeBtn = document.getElementById('themeBtn');
-    const langBtn = document.getElementById('langBtn');
+const platformsData = {
+    ar: [
+        {name:"متجر سلة", desc:"منصة إدارة المتاجر الإلكترونية المتكاملة", icon:"fa-cart-shopping"},
+        {name:"جاهز", desc:"منصة التجارة الإلكترونية السحابية", icon:"fa-cloud"},
+        {name:"مرسول", desc:"منصة توصيل الطلبات", icon:"fa-motorcycle"},
+        {name:"تريليون", desc:"منصة الدفع الإلكتروني", icon:"fa-credit-card"},
+        {name:"أمازون", desc:"منصة البيع العالمية", icon:"fa-amazon"}
+    ],
+    en: [
+        {name:"Salla", desc:"Integrated e-commerce management platform", icon:"fa-cart-shopping"},
+        {name:"Jahez", desc:"Cloud e-commerce platform", icon:"fa-cloud"},
+        {name:"Marsool", desc:"Order delivery platform", icon:"fa-motorcycle"},
+        {name:"Trillion", desc:"Electronic payment platform", icon:"fa-credit-card"},
+        {name:"Amazon", desc:"Global selling platform", icon:"fa-amazon"}
+    ]
+};
 
-    // Sidebar Controls
-    document.getElementById('drawerOpenBtn').onclick = () => { sidebar.classList.add('open'); overlay.classList.add('show'); };
-    const closePanel = () => { sidebar.classList.remove('open'); overlay.classList.remove('show'); };
-    document.getElementById('drawerCloseBtn').onclick = closePanel;
-    overlay.onclick = closePanel;
-    document.querySelectorAll('.sidebar-links a').forEach(a => a.addEventListener('click', closePanel));
+let currentLang = 'ar';
+let currentTheme = 'light';
 
-    // Theme Toggle
-    themeBtn.onclick = () => {
-        currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        themeBtn.innerHTML = currentTheme === 'light' ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
-    };
+// DOM Elements
+const sidebar = document.getElementById('sidebarPanel');
+const overlay = document.getElementById('panelOverlay');
+const themeBtn = document.getElementById('themeBtn');
+const langBtn = document.getElementById('langBtn');
+const drawerOpenBtn = document.getElementById('drawerOpenBtn');
+const drawerCloseBtn = document.getElementById('drawerCloseBtn');
 
-    // Email Function
-    function sendEmailClient(name, email, message) {
-        const toEmail = "hassenma2100@gmail.com";
-        let subject, body;
-        if (currentLang === 'ar') {
-            subject = `طلب استشارة تقنية من ${name}`;
-            body = `الاسم: ${name}%0A%0Aالبريد الإلكتروني: ${email}%0A%0Aالرسالة:%0A${message}`;
-        } else {
-            subject = `Technical Consultation Request from ${name}`;
-            body = `Name: ${name}%0A%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
-        }
-        const mailtoLink = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${body}`;
-        window.location.href = mailtoLink;
-        return true;
-    }
+// Sidebar Controls
+drawerOpenBtn.onclick = () => { sidebar.classList.add('open'); overlay.classList.add('show'); };
+const closePanel = () => { sidebar.classList.remove('open'); overlay.classList.remove('show'); };
+drawerCloseBtn.onclick = closePanel;
+overlay.onclick = closePanel;
+document.querySelectorAll('.sidebar-links a').forEach(a => a.addEventListener('click', closePanel));
 
-    // Form submission
-    document.getElementById('sendBtn').onclick = () => {
-        const name = document.getElementById('inputName').value.trim();
-        const email = document.getElementById('inputEmail').value.trim();
-        const message = document.getElementById('inputMessage').value.trim();
-        const fb = document.getElementById('formFeedback');
-        
-        if (!name || !email || !message) {
-            fb.innerHTML = currentLang === 'ar' ? '⚠️ الرجاء تعبئة جميع الحقول' : '⚠️ Please fill all fields';
-            fb.style.color = '#eab308';
-            setTimeout(() => fb.innerHTML = '', 3000);
-            return;
-        }
-        if (!email.includes('@') || !email.includes('.')) {
-            fb.innerHTML = currentLang === 'ar' ? '⚠️ الرجاء إدخال بريد إلكتروني صالح' : '⚠️ Please enter a valid email';
-            fb.style.color = '#eab308';
-            setTimeout(() => fb.innerHTML = '', 3000);
-            return;
-        }
-        
-        sendEmailClient(name, email, message);
-        fb.innerHTML = currentLang === 'ar' ? '✅ تم فتح البريد الإلكتروني. راجع البيانات ثم اضغط إرسال' : '✅ Email opened. Review data then click send';
-        fb.style.color = '#4ade80';
-        document.getElementById('inputName').value = '';
-        document.getElementById('inputEmail').value = '';
-        document.getElementById('inputMessage').value = '';
-        setTimeout(() => fb.innerHTML = '', 5000);
-    };
+// Theme Toggle
+themeBtn.onclick = () => {
+    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    themeBtn.innerHTML = currentTheme === 'light' ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
+};
 
-    // ============================================
-    // MOBILE HOVER EFFECT - FIXED FOR SCROLLING
-    // ============================================
+// Form submission
+document.getElementById('sendBtn').onclick = () => {
+    const name = document.getElementById('inputName').value.trim();
+    const email = document.getElementById('inputEmail').value.trim();
+    const message = document.getElementById('inputMessage').value.trim();
+    const fb = document.getElementById('formFeedback');
     
-    let hoverTimeoutIds = new Map();
-    let currentHoveredElement = null;
-    
-    function initMobileHover() {
-        if (window.innerWidth > 768) return;
-        
-        const selectors = [
-            '.matrix-node', '.showcase-card', '.credential-card',
-            '.philosophy-container', '.metric-box', '.channel-unit', '.btn-primary'
-        ];
-        
-        const elements = document.querySelectorAll(selectors.join(','));
-        
-        // Intersection Observer for scroll-based hover
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Add hover effect when element comes into view
-                    entry.target.classList.add('hover-effect');
-                    
-                    // Remove effect after the user stops looking at it
-                    const timeoutId = setTimeout(() => {
-                        entry.target.classList.remove('hover-effect');
-                    }, 800);
-                    
-                    hoverTimeoutIds.set(entry.target, timeoutId);
-                } else {
-                    // Remove effect when element leaves viewport
-                    if (hoverTimeoutIds.has(entry.target)) {
-                        clearTimeout(hoverTimeoutIds.get(entry.target));
-                        hoverTimeoutIds.delete(entry.target);
-                    }
-                    entry.target.classList.remove('hover-effect');
-                }
-            });
-        }, { threshold: 0.3, rootMargin: '0px' });
-        
-        elements.forEach(el => observer.observe(el));
-        
-        // Touch handlers for immediate feedback
-        elements.forEach(el => {
-            el.addEventListener('touchstart', function(e) {
-                // Remove hover from previously touched element
-                if (currentHoveredElement && currentHoveredElement !== this) {
-                    currentHoveredElement.classList.remove('hover-effect');
-                }
-                
-                // Clear any existing timeout for this element
-                if (hoverTimeoutIds.has(this)) {
-                    clearTimeout(hoverTimeoutIds.get(this));
-                    hoverTimeoutIds.delete(this);
-                }
-                
-                // Add hover effect
-                this.classList.add('hover-effect');
-                currentHoveredElement = this;
-            }, { passive: true });
-            
-            el.addEventListener('touchend', function(e) {
-                // Remove hover after delay
-                const timeoutId = setTimeout(() => {
-                    this.classList.remove('hover-effect');
-                    if (currentHoveredElement === this) {
-                        currentHoveredElement = null;
-                    }
-                }, 300);
-                hoverTimeoutIds.set(this, timeoutId);
-            });
-            
-            el.addEventListener('touchcancel', function(e) {
-                this.classList.remove('hover-effect');
-                if (hoverTimeoutIds.has(this)) {
-                    clearTimeout(hoverTimeoutIds.get(this));
-                    hoverTimeoutIds.delete(this);
-                }
-                if (currentHoveredElement === this) {
-                    currentHoveredElement = null;
-                }
-            });
-        });
+    if (!name || !email || !message) {
+        fb.innerHTML = currentLang === 'ar' ? '⚠️ الرجاء تعبئة جميع الحقول' : '⚠️ Please fill all fields';
+        fb.style.color = '#eab308';
+        setTimeout(() => fb.innerHTML = '', 3000);
+        return;
     }
+    if (!email.includes('@') || !email.includes('.')) {
+        fb.innerHTML = currentLang === 'ar' ? '⚠️ الرجاء إدخال بريد إلكتروني صالح' : '⚠️ Please enter a valid email';
+        fb.style.color = '#eab308';
+        setTimeout(() => fb.innerHTML = '', 3000);
+        return;
+    }
+    
+    const subject = currentLang === 'ar' ? `طلب إدارة متجر إلكتروني من ${name}` : `E-commerce Store Management Request from ${name}`;
+    const body = currentLang === 'ar' 
+        ? `الاسم: ${name}%0A%0Aالبريد الإلكتروني: ${email}%0A%0Aالرسالة:%0A${message}`
+        : `Name: ${name}%0A%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
+    window.location.href = `mailto:hassenma2100@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    
+    fb.innerHTML = currentLang === 'ar' ? '✅ تم فتح البريد الإلكتروني. راجع البيانات ثم اضغط إرسال' : '✅ Email opened. Review data then click send';
+    fb.style.color = '#4ade80';
+    document.getElementById('inputName').value = '';
+    document.getElementById('inputEmail').value = '';
+    document.getElementById('inputMessage').value = '';
+    setTimeout(() => fb.innerHTML = '', 5000);
+};
 
-    // Update Content Function
-    function updateContent() {
-        const isAr = currentLang === 'ar';
-        document.documentElement.setAttribute('dir', isAr ? 'rtl' : 'ltr');
-        document.documentElement.setAttribute('lang', isAr ? 'ar' : 'en');
-        
-        const texts = {
-            brandLogo: isAr ? "حسين الحضرمي" : "Hussein Al-Hadhrami",
-            navHome: isAr ? "الرئيسية" : "Home",
-            navServices: isAr ? "الخدمات" : "Services",
-            navPortfolio: isAr ? "الأعمال" : "Portfolio",
-            navCredentials: isAr ? "الاعتمادات" : "Credentials",
-            navPhilosophy: isAr ? "الفلسفة" : "Philosophy",
-            navContact: isAr ? "التواصل" : "Contact",
-            sideFooterText: isAr ? "استشارات رقمية متقدمة" : "Advanced Digital Consulting",
-            heroBadgeText: isAr ? "استشاري نظم رقمية متقدم" : "Senior Digital Systems Consultant",
-            heroMainTitle: isAr ? "هندسة <span>حلول رقمية</span> فائقة الأداء" : "Engineering <span>High-Performance</span> Digital Solutions",
-            heroDescText: isAr ? "أصمم وأطور منظومات تقنية مبتكرة، تجمع بين السرعة الفائقة والأمان المطلق، لتحويل أفكاركم إلى واقع رقمي متكامل." : "I design innovative tech ecosystems combining speed, security, and scalability to transform your ideas into reality.",
-            heroBtnText: isAr ? "استشارة فورية" : "Free Consultation",
-            stat1Text: isAr ? "سنوات خبرة" : "Years Exp",
-            stat2Text: isAr ? "مشروع متكامل" : "Projects Done",
-            stat3Text: isAr ? "مرونة بنيوية" : "Scalability",
-            servicesTag: isAr ? "مجالات الخبرة" : "Expertise Areas",
-            servicesTitle: isAr ? "حلول برمجية شاملة ومتكاملة" : "Comprehensive Software Solutions",
-            portfolioTag: isAr ? "أعمال استراتيجية" : "Strategic Projects",
-            portfolioTitle: isAr ? "مشاريع رائدة منفذة" : "Flagship Deliverables",
-            credsTag: isAr ? "الجدارة المهنية" : "Professional Merits",
-            credsTitle: isAr ? "الاعتمادات والشهادات التخصصية" : "Certifications & Credentials",
-            philosophyText: isAr ? '"البرمجة الحقيقية تتجاوز مجرد كتابة الأكواد؛ إنها فن هندسة حلول مرنة تقضي على التعقيد، وتمنح الأنظمة القدرة على النمو المستدام."' : '"True programming goes beyond code; it\'s the art of building adaptive solutions that eliminate complexity and enable sustainable growth."',
-            phName: isAr ? "حسين الحضرمي" : "Hussein Al-Hadhrami",
-            phTitle: isAr ? "| مستشار النظم والحلول الرقمية" : "| Digital Systems Consultant",
-            contactTitle: isAr ? "لنبدأ مشروعك القادم" : "Start Your Next Project",
-            contactDesc: isAr ? "تواصل معي الآن لمناقشة متطلباتك التقنية وتحويل رؤيتك إلى واقع رقمي." : "Contact me now to discuss your technical requirements.",
-            phoneLabel: isAr ? "رقم الاتصال المباشر" : "Direct Phone",
-            emailLabel: isAr ? "البريد الإلكتروني" : "Email Address",
-            locationLabel: isAr ? "الموقع الجغرافي" : "Location",
-            locationValue: "المملكة العربية السعودية",
-            nameLabel: isAr ? "الاسم الكامل أو المؤسسة" : "Full Name / Organization",
-            emailFormLabel: isAr ? "البريد الإلكتروني" : "Email Address",
-            messageLabel: isAr ? "تفاصيل المشروع التقني" : "Project Technical Details",
-            sendBtnText: isAr ? "إرسال الطلب" : "Send Request",
-            footerText: isAr ? "© 2026 حسين الحضرمي — جميع الحقوق الفنية والهندسية محفوظة" : "© 2026 Hussein Al-Hadhrami — All Technical Rights Reserved"
-        };
-        
-        for (let [id, val] of Object.entries(texts)) {
-            const el = document.getElementById(id);
-            if (el) {
-                if (id === 'heroMainTitle') el.innerHTML = val;
-                else if (id === 'locationValue') el.innerText = val;
-                else el.innerText = val;
+// Mobile Hover Effect
+function initMobileHover() {
+    if (window.innerWidth > 768) return;
+    const selectors = ['.matrix-node', '.showcase-card', '.credential-card', '.philosophy-container', '.metric-box', '.channel-unit', '.btn-primary'];
+    const elements = document.querySelectorAll(selectors.join(','));
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('hover-effect');
+                setTimeout(() => entry.target.classList.remove('hover-effect'), 600);
+                observer.unobserve(entry.target);
             }
-        }
-        
-        const servicesData = isAr ? servicesAr : servicesEn;
-        document.getElementById('servicesGrid').innerHTML = servicesData.map(s => `
-            <div class="matrix-node" data-aos="fade-up">
-                <div class="node-icon"><i class="fa-solid ${s.icon}"></i></div>
-                <h3>${s.title}</h3>
-                <p>${s.desc}</p>
-            </div>
-        `).join('');
-        
-        const portfolioData = isAr ? portfolioAr : portfolioEn;
-        document.getElementById('portfolioGrid').innerHTML = portfolioData.map(p => `
-            <div class="showcase-card" data-aos="fade-up">
-                <div class="showcase-media"><i class="fa-solid ${p.icon}"></i></div>
-                <div class="showcase-body"><h3>${p.title}</h3><p>${p.desc}</p></div>
-            </div>
-        `).join('');
-        
-        const credsData = isAr ? credsAr : credsEn;
-        document.getElementById('credsGrid').innerHTML = credsData.map(c => `
-            <div class="credential-card">
-                <div class="cred-icon"><i class="fa-solid ${c.icon}"></i></div>
-                <div><h3 style="color:var(--text-title);">${c.title}</h3><p>${c.desc}</p></div>
-            </div>
-        `).join('');
-        
-        setTimeout(() => {
-            AOS.refresh();
-            if (window.innerWidth <= 768) {
-                initMobileHover();
-            }
-        }, 100);
-    }
+        });
+    }, { threshold: 0.3 });
+    
+    elements.forEach(el => observer.observe(el));
+    
+    elements.forEach(el => {
+        el.addEventListener('touchstart', () => el.classList.add('hover-effect'), { passive: true });
+        el.addEventListener('touchend', () => setTimeout(() => el.classList.remove('hover-effect'), 200));
+    });
+}
 
-    // Language Toggle
-    langBtn.onclick = () => { 
-        currentLang = currentLang === 'ar' ? 'en' : 'ar'; 
-        updateContent();
+// Update Content
+function updateContent() {
+    const isAr = currentLang === 'ar';
+    document.documentElement.setAttribute('dir', isAr ? 'rtl' : 'ltr');
+    
+    // Update brand logo
+    const brandLogo = document.getElementById('brandLogo');
+    if (brandLogo) {
+        brandLogo.innerText = isAr ? 'م.حسين الحضرمي' : 'Eng. Hussein Al-Hadhrami';
+    }
+    
+    // Update location value
+    const locationValue = document.getElementById('locationValue');
+    if (locationValue) {
+        locationValue.innerText = isAr ? 'المملكة العربية السعودية' : 'Saudi Arabia';
+    }
+    
+    // Update navigation texts
+    const navTexts = {
+        navHome: isAr ? "الرئيسية" : "Home",
+        navServices: isAr ? "المهام" : "Tasks",
+        navPortfolio: isAr ? "المتاجر" : "Stores",
+        navPlatforms: isAr ? "المنصات" : "Platforms",
+        navPhilosophy: isAr ? "رؤيتي" : "My Vision",
+        navContact: isAr ? "التواصل" : "Contact",
+        sideFooterText: isAr ? "إدارة احترافية للمتاجر الإلكترونية" : "Professional E-commerce Management",
+        heroBadgeText: isAr ? "مدير متاجر إلكترونية محترف" : "Professional E-commerce Manager",
+        heroMainTitle: isAr ? "إدارة <span>متاجر إلكترونية</span> احترافية" : "Professional <span>E-commerce</span> Management",
+        heroDescText: isAr ? "أدير وأشرف على المتاجر الإلكترونية بخبرة عالية، من إدارة المنتجات إلى تحسين المبيعات ورضا العملاء." : "I manage and supervise e-commerce stores with high expertise, from product management to sales optimization.",
+        heroBtnText: isAr ? "تواصل معي" : "Contact Me",
+        stat1Text: isAr ? "متاجر مُدارة" : "Stores Managed",
+        stat2Text: isAr ? "منصات شغال" : "Platforms",
+        stat3Text: isAr ? "رضا العملاء" : "Client Satisfaction",
+        servicesTag: isAr ? "المهام والمسؤوليات" : "Responsibilities",
+        servicesTitle: isAr ? "ما أقدمه من خدمات في إدارة المتاجر" : "E-commerce Management Services",
+        portfolioTag: isAr ? "أعمال سابقة" : "Previous Work",
+        portfolioTitle: isAr ? "المتاجر الإلكترونية التي تم إدارتها" : "Managed E-commerce Stores",
+        platformsTag: isAr ? "المنصات والخبرات" : "Platforms & Expertise",
+        platformsTitle: isAr ? "المنصات التي أعمل عليها" : "Platforms I Work With",
+        philosophyText: isAr ? '"إدارة المتاجر الإلكترونية ليست مجرد رفع منتجات، إنها فن تحقيق التوازن بين تجربة العميل، جودة الخدمة، وتحقيق الأرباح المستدامة."' : '"E-commerce management is not just about uploading products, it\'s the art of balancing customer experience, service quality, and sustainable profits."',
+        phName: isAr ? "م.حسين الحضرمي" : "Eng. Hussein Al-Hadhrami",
+        phTitle: isAr ? "| مدير متاجر إلكترونية محترف" : "| Professional E-commerce Manager",
+        contactTitle: isAr ? "لنبدأ مشروعك القادم" : "Start Your Next Project",
+        contactDesc: isAr ? "تواصل معي الآن لإدارة متجرك الإلكتروني باحترافية." : "Contact me now to manage your e-commerce store professionally.",
+        phoneLabel: isAr ? "واتساب" : "WhatsApp",
+        emailLabel: isAr ? "البريد الإلكتروني" : "Email",
+        locationLabel: isAr ? "الموقع الجغرافي" : "Location",
+        nameLabel: isAr ? "الاسم الكامل أو المؤسسة" : "Full Name / Organization",
+        emailFormLabel: isAr ? "البريد الإلكتروني" : "Email",
+        messageLabel: isAr ? "تفاصيل المشروع أو الاستفسار" : "Project Details",
+        sendBtnText: isAr ? "إرسال الطلب" : "Send Request",
+        footerText: isAr ? "© 2026 م.حسين الحضرمي — جميع الحقوق محفوظة | إدارة متاجر إلكترونية احترافية" : "© 2026 Eng. Hussein Al-Hadhrami — All Rights Reserved | Professional E-commerce Management"
     };
     
-    // Initialize
-    window.addEventListener('DOMContentLoaded', () => {
-        AOS.init({ once: false, duration: 800, easing: 'ease-out-cubic' });
-        updateContent();
-        if (window.innerWidth <= 768) {
-            setTimeout(initMobileHover, 200);
+    for (let [id, val] of Object.entries(navTexts)) {
+        const el = document.getElementById(id);
+        if (el) {
+            if (id === 'heroMainTitle') el.innerHTML = val;
+            else el.innerText = val;
         }
-    });
+    }
     
-    // Active link on scroll
-    window.addEventListener('scroll', () => {
-        let active = '';
-        document.querySelectorAll('section').forEach(s => {
-            if (pageYOffset >= (s.offsetTop - 250)) active = s.getAttribute('id');
-        });
-        document.querySelectorAll('.sidebar-links a').forEach(l => {
-            l.classList.remove('active');
-            if (l.getAttribute('href') === `#${active}`) l.classList.add('active');
-        });
-    });
+    // Update services grid
+    const services = isAr ? servicesData.ar : servicesData.en;
+    document.getElementById('servicesGrid').innerHTML = services.map(s => `
+        <div class="matrix-node" data-aos="fade-up">
+            <div class="node-icon"><i class="fa-solid ${s.icon}"></i></div>
+            <h3>${s.title}</h3>
+            <p>${s.desc}</p>
+        </div>
+    `).join('');
     
-    // Re-initialize on resize for mobile
-    window.addEventListener('resize', () => {
-        if (window.innerWidth <= 768) {
-            initMobileHover();
-        }
+    // Update portfolio grid
+    const portfolio = isAr ? portfolioData.ar : portfolioData.en;
+    document.getElementById('portfolioGrid').innerHTML = portfolio.map(p => `
+        <div class="showcase-card" data-aos="fade-up">
+            <div class="showcase-media">
+                <i class="fa-solid ${p.icon}"></i>
+            </div>
+            <div class="showcase-body">
+                <h3>${p.name}</h3>
+                <p>${p.desc}</p>
+                <a href="${p.url}" target="_blank" class="showcase-link" rel="noopener noreferrer">${isAr ? 'زيارة المتجر' : 'Visit Store'} <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+        </div>
+    `).join('');
+    
+    // Update platforms grid
+    const platforms = isAr ? platformsData.ar : platformsData.en;
+    document.getElementById('platformsGrid').innerHTML = platforms.map(p => `
+        <div class="credential-card">
+            <div class="cred-icon"><i class="fa-solid ${p.icon}"></i></div>
+            <div><h3 style="color:var(--text-title);">${p.name}</h3><p>${p.desc}</p></div>
+        </div>
+    `).join('');
+    
+    setTimeout(() => {
+        AOS.refresh();
+        if (window.innerWidth <= 768) initMobileHover();
+    }, 100);
+}
+
+// Language Toggle
+langBtn.onclick = () => {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    updateContent();
+};
+
+// Initialize AOS
+window.addEventListener('DOMContentLoaded', () => {
+    AOS.init({ once: false, duration: 800 });
+    updateContent();
+    if (window.innerWidth <= 768) setTimeout(initMobileHover, 200);
+});
+
+// Active link on scroll
+window.addEventListener('scroll', () => {
+    let active = '';
+    document.querySelectorAll('section').forEach(s => {
+        if (pageYOffset >= (s.offsetTop - 250)) active = s.getAttribute('id');
     });
+    document.querySelectorAll('.sidebar-links a').forEach(l => {
+        l.classList.remove('active');
+        if (l.getAttribute('href') === `#${active}`) l.classList.add('active');
+    });
+});
+
+// Reinitialize on resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth <= 768) {
+        initMobileHover();
+    }
+});
