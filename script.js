@@ -29,8 +29,8 @@ const servicesData = {
 const portfolioData = {
     ar: [
         {name:"متجر الحمد للحقائب", url:"https://alhamadbags.com", icon:"fa-bag-shopping", desc:"متجر متخصص في الحقائب والسفر"},
-        {name:"متجر متاح السفر", url:"https://mta3sfr.com", icon:"fa-plane", desc:"متجر لحقائب السفر والإكسسوارات"},
-        {name:"متجر جزيرة الطيب", url:"https://jazeert.sa", icon:"fa-crown", desc:"متجر متخصص في المنتجات الغذائية والتمور"},
+        {name:"متجر متاع السفر", url:"https://mta3sfr.com", icon:"fa-plane", desc:"متجر لحقائب السفر والإكسسوارات"},
+        {name:"متجر جزيرة الطيب", url:"https://jazeert.sa", icon:"fa-crown", desc:"متجر متخصص في منتجات العطور والبخور"},
         {name:"متجر أفكار مودرن", url:"https://afkar-modern.com", icon:"fa-lightbulb", desc:"متجر للأثاث والديكورات العصرية"},
         {name:"متجر العوبتاني للبلاستيك", url:"https://asalobathani.com", icon:"fa-recycle", desc:"متجر متخصص في المنتجات البلاستيكية"},
         {name:"متجر سليب ستار", url:"https://sleepstar.sa", icon:"fa-bed", desc:"متجر للمفروشات ومستلزمات النوم"}
@@ -38,7 +38,7 @@ const portfolioData = {
     en: [
         {name:"Alhamad Bags", url:"https://alhamadbags.com", icon:"fa-bag-shopping", desc:"Specialized in bags and travel"},
         {name:"Mta3sfr", url:"https://mta3sfr.com", icon:"fa-plane", desc:"Travel bags and accessories store"},
-        {name:"Jazeert Store", url:"https://jazeert.sa", icon:"fa-crown", desc:"Specialized in food products and dates"},
+        {name:"Jazeert Store", url:"https://jazeert.sa", icon:"fa-crown", desc:"Specialized in perfumes and incense products"},
         {name:"Afkar Modern", url:"https://afkar-modern.com", icon:"fa-lightbulb", desc:"Modern furniture and decor store"},
         {name:"Asalobathani Plastic", url:"https://asalobathani.com", icon:"fa-recycle", desc:"Specialized in plastic products"},
         {name:"Sleepstar", url:"https://sleepstar.sa", icon:"fa-bed", desc:"Furniture and bedding store"}
