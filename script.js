@@ -47,19 +47,19 @@ const portfolioData = {
 
 const platformsData = {
     ar: [
+        { name: "سلة", desc: "منصة إدارة المتاجر الإلكترونية المتكاملة", icon: "fa-cart-shopping" },
         { name: "جاهز", desc: "منصة التجارة الإلكترونية السحابية", icon: "fa-cloud" },
         { name: "مرسول", desc: "منصة توصيل الطلبات", icon: "fa-motorcycle" },
         { name: "ترينديول", desc: "منصة الدفع الإلكتروني", icon: "fa-credit-card" },
         { name: "نون", desc: "منصة التسوق الإلكتروني الإقليمية", icon: "fa-bag-shopping" },
-        { name: "سلة", desc: "منصة إدارة المتاجر الإلكترونية المتكاملة", icon: "fa-cart-shopping" },
         { name: "أمازون", desc: "منصة البيع العالمية", icon: "fa-amazon" }
     ],
     en: [
+        { name: "Salla", desc: "Integrated e-commerce management platform", icon: "fa-cart-shopping" },
         { name: "Jahez", desc: "Cloud e-commerce platform", icon: "fa-cloud" },
         { name: "Marsool", desc: "Order delivery platform", icon: "fa-motorcycle" },
         { name: "Trendyol", desc: "Electronic payment platform", icon: "fa-credit-card" },
         { name: "Noon", desc: "Regional e-commerce platform", icon: "fa-bag-shopping" },
-        { name: "Salla", desc: "Integrated e-commerce management platform", icon: "fa-cart-shopping" },
         { name: "Amazon", desc: "Global selling platform", icon: "fa-amazon" }
     ]
 };
