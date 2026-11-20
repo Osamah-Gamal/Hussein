@@ -1,6 +1,7 @@
 // Data - English and Arabic
 const servicesData = {
     ar: [
+        { title: "إنشاء المتاجر الإلكترونية", icon: "fa-cart-plus", desc: "إنشاء وتصميم المتاجر الإلكترونية وإعدادها للعمل بشكل احترافي." },
         { title: "الإشراف الكامل على المتجر", icon: "fa-store", desc: "مسؤول عن المتجر الإلكتروني والإشراف الكامل على سير العمل اليومي." },
         { title: "قيادة فريق خدمة العملاء", icon: "fa-users", desc: "قيادة ومتابعة فريق خدمة العملاء لضمان رضا العملاء وحل مشاكلهم بسرعة." },
         { title: "التنسيق مع التسويق", icon: "fa-chart-line", desc: "التنسيق مع فريق التسويق لتنفيذ الحملات ومتابعة نتائجها وتحسينها." },
@@ -13,6 +14,7 @@ const servicesData = {
         { title: "تقارير دورية", icon: "fa-file-alt", desc: "تقديم تقارير دورية لإدارة المتجر تتضمن الإنجازات والتوصيات التطويرية." }
     ],
     en: [
+        { title: "E-commerce Store Creation", icon: "fa-cart-plus", desc: "Creating and configuring e-commerce stores for professional operation." },
         { title: "Full Store Supervision", icon: "fa-store", desc: "Responsible for the e-commerce store and full supervision of daily workflow." },
         { title: "Customer Service Leadership", icon: "fa-users", desc: "Leading and following up the customer service team to ensure satisfaction and quick problem resolution." },
         { title: "Marketing Coordination", icon: "fa-chart-line", desc: "Coordinating with marketing team to execute campaigns and improve results." },
@@ -28,6 +30,7 @@ const servicesData = {
 
 const portfolioData = {
     ar: [
+        {name:"متجر نقش أصيل", url:"https://naqshaseel.com/", icon:"fa-gem", desc:"متجر متخصص في الشالات الباشمينا (الكشميري)"},
         {name:"متجر الحمد للحقائب", url:"https://alhamadbags.com", icon:"fa-bag-shopping", desc:"متجر متخصص في الحقائب والسفر"},
         {name:"متجر متاع السفر", url:"https://mta3sfr.com", icon:"fa-plane", desc:"متجر لحقائب السفر والإكسسوارات"},
         {name:"متجر جزيرة الطيب", url:"https://jazeert.sa", icon:"fa-crown", desc:"متجر متخصص في منتجات العطور والبخور"},
@@ -36,6 +39,7 @@ const portfolioData = {
         {name:"متجر سليب ستار", url:"https://sleepstar.sa", icon:"fa-bed", desc:"متجر للمفروشات ومستلزمات النوم"}
     ],
     en: [
+        {name:"Naqsh Aseel Store", url:"https://naqshaseel.com/", icon:"fa-gem", desc:"Specialized in Pashmina shawls (Cashmere)"},
         {name:"Alhamad Bags", url:"https://alhamadbags.com", icon:"fa-bag-shopping", desc:"Specialized in bags and travel"},
         {name:"Mta3sfr", url:"https://mta3sfr.com", icon:"fa-plane", desc:"Travel bags and accessories store"},
         {name:"Jazeert Store", url:"https://jazeert.sa", icon:"fa-crown", desc:"Specialized in perfumes and incense products"},
@@ -169,7 +173,7 @@ function updateContent() {
         stat2Text: isAr ? "منصات احترافية" : "Platforms",
         stat3Text: isAr ? "رضا العملاء" : "Client Satisfaction",
         servicesTag: isAr ? "المهام والمسؤوليات" : "Responsibilities",
-        servicesTitle: isAr ? "ما أقدمه من خدمات في إدارة المتاجر" : "E-commerce Management Services",
+        servicesTitle: isAr ? "ما أقدمه من خدمات في إنشاء وإدارة المتاجر" : "E-commerce Store Creation and Management Services",
         portfolioTag: isAr ? "أعمال سابقة" : "Previous Work",
         portfolioTitle: isAr ? "المتاجر الإلكترونية التي تم إدارتها" : "Managed E-commerce Stores",
         platformsTag: isAr ? "المنصات والخبرات" : "Platforms & Expertise",
